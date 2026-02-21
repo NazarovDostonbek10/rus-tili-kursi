@@ -1,156 +1,380 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Курс Русского Языка</title>
+  <title>Rus tili kursi | ProMax</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      background: url('https://media.istockphoto.com/id/953061594/photo/r…20&c=kTTihOn_VMPl95rt3sMHMB2cR_xUhytXeheJJVf-uLA=') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-    }
-    header {
-      background: url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
-      color: rgb(255, 0, 0);
-      text-align: center;
-      padding: 25px 20px;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 10px 10px rgb(7, 7, 7);
-    }
-    header h1 {
-      font-size: 35px;
-      margin: 0;
-      text-shadow: 2px 2px 6px rgb(0, 0, 0);
-    }
-    header h2 {
-      font-size: 25px;
-      margin: 10px 0 0;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
-    }
-    .container {
-      background: linear-gradient(40deg, blue,red);
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    .image-box {
-      position: relative;
-      text-align: center;
-      margin: 2px 0;
-    }
-    .image-box img {
-      max-width: 100%;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-    .overlay-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: rgb(255, 255, 255);
-      font-size: 24px;
-      font-weight: bold;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-      width: 80%;
-    }
-    .footer {
-      background: linear-gradient(90deg, blue,red);
-      color: rgb(5, 5, 5);
-      text-align: center;
-      padding: 20px;
-      margin-top: 3px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background:blue;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      margin-top: 20px;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background:red;
-      transform: scale(1.05);
-    }
-    p{
-        font-size: 20px;
-        color:rgb(253, 252, 252);
-    }
-    .text1{
-        font-size: 30px;
-        color: red;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* 📱 Telefon ekranlari uchun moslashuv */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 26px;
-      }
-      header h2 {
-        font-size: 18px;
-      }
-      .overlay-text {
-        font-size: 16px;
-        width: 95%;
-      }
-      .text1 {
-        font-size: 20px;
-      }
-      p {
-        font-size: 16px;
-      }
-      .btn {
-        font-size: 16px;
-        padding: 10px 18px;
-      }
+    body {
+      background: linear-gradient(145deg, #f6f9fc 0%, #e9f0f5 100%);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .card {
+      max-width: 1000px;
+      width: 100%;
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-radius: 3.5rem;
+      box-shadow: 
+        0 30px 60px -20px rgba(0,20,40,0.3),
+        inset 0 0 0 1px rgba(255,255,255,0.7);
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .kurs-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .kurs-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .kurs-title .kurs-label {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: #1E3E5C;
+      background: rgba(30,62,92,0.12);
+      display: inline-block;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 0.7rem;
+      width: fit-content;
+    }
+
+    .kurs-title h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      line-height: 1.1;
+      background: linear-gradient(130deg, #0A2A3F, #1D4E6F);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .kurs-title h1 span {
+      font-weight: 300;
+      font-size: 1.8rem;
+      background: none;
+      -webkit-text-fill-color: #5C7E9C;
+      display: block;
+    }
+
+    .start-badge {
+      background: #0F2C3D;
+      padding: 0.8rem 1.8rem;
+      border-radius: 100px;
+      box-shadow: 0 10px 20px -8px rgba(0,32,64,0.3);
+    }
+
+    .start-badge span {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .start-badge span i {
+      color: #FFD966;
+      margin-right: 8px;
+      font-size: 2rem;
+      vertical-align: middle;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #1F3A4B;
+      margin: 1.8rem 0 2rem 0;
+      background: rgba(255,255,255,0.7);
+      padding: 1.2rem 2rem;
+      border-radius: 2rem;
+      border-left: 8px solid #1E5A84;
+      box-shadow: 0 4px 12px rgba(0,33,65,0.05);
+      backdrop-filter: blur(4px);
+    }
+
+    .grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin: 2.5rem 0;
+    }
+
+    .feature-block {
+      background: white;
+      border-radius: 2.2rem;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 15px 30px -12px rgba(18,52,77,0.15);
+      transition: transform 0.2s;
+      border: 1px solid rgba(255,255,255,0.9);
+    }
+
+    .feature-block:hover {
+      transform: translateY(-6px);
+    }
+
+    .feature-block i {
+      font-size: 2.2rem;
+      background: #E1EDF5;
+      color: #15507B;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-block h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0F344C;
+      margin-bottom: 0.9rem;
+    }
+
+    .feature-block p, .feature-block .uz-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #2B4C66;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .uz-text {
+      display: block;
+      background: #F0F7FD;
+      padding: 0.6rem 1rem;
+      border-radius: 1.5rem;
+      margin-top: 0.7rem;
+      font-weight: 500;
+      color: #0A2C41;
+    }
+
+    .uz-text i {
+      font-size: 0.9rem;
+      background: transparent;
+      width: auto;
+      height: auto;
+      margin-right: 8px;
+      color: #1D6F9C;
+    }
+
+    .extra-feature {
+      background: #FCF9F2;
+      border-radius: 1.8rem;
+      padding: 1.8rem;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      border: 1px solid #FFEEC2;
+    }
+
+    .extra-feature i {
+      font-size: 2.5rem;
+      color: #B36B3C;
+    }
+
+    .teacher-info {
+      background: #132C3C;
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      margin: 2rem 0 1.5rem;
+    }
+
+    .teacher-detail {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    .teacher-detail i {
+      font-size: 2.8rem;
+      color: #F4C28B;
+    }
+
+    .teacher-detail .name {
+      font-size: 1.45rem;
+      font-weight: 600;
+    }
+
+    .teacher-detail .title {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      display: block;
+    }
+
+    .location-contact {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .location-contact div i {
+      margin-right: 0.6rem;
+      color: #A9CDEC;
+    }
+
+    .phone-block {
+      background: #1E4F6E;
+      border-radius: 2rem;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: white;
+      box-shadow: 0 8px 18px #0F2F41;
+    }
+
+    .phone-block i {
+      background: #FFD966;
+      color: #0F2C3D;
+      padding: 0.8rem;
+      border-radius: 50%;
+      margin-right: 0.8rem;
+      font-size: 1.4rem;
+    }
+
+    .phone-number {
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255,0.15);
+      padding: 0.5rem 1.5rem;
+      border-radius: 3rem;
+      letter-spacing: 0.5px;
+    }
+
+    .small-note {
+      margin-top: 2rem;
+      text-align: right;
+      font-weight: 300;
+      color: #46758B;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, #BFD9EB, transparent);
+      margin: 2rem 0 1rem;
+    }
+
+    @media (max-width: 720px) {
+      .card { padding: 1.8rem; }
+      .grid-2col { grid-template-columns: 1fr; }
+      .kurs-header { flex-direction: column; align-items: start; gap: 1.2rem; }
+      .teacher-info { flex-direction: column; align-items: start; gap: 1rem; }
     }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>КУРС РУССКОГО ЯЗЫКА❕</h1>
-  <h2>ГРАММАТИКА • РАЗГОВОР ✔️</h2>
-</header>
-
-<div class="container">
-  <div class="image-box">
-    <img src="http://static.xabar.uz/crop/3/6/720_460_95_36101493.jpg" alt="Rus tili kursi rasmi">
-    <div class="overlay-text">
-      <p class="text1">Rus tili kurslariga <span class="hi">START!</span></p>
-      <p class="text1">Занимайтесь русским языком и откройте для себя мир грамотности и яркого общения.</p>
-      ⭐ Уроки проводятся понятно и интересно<br>
-      📘 Повышение уровня грамотности<br>
-      📝 Помощь в освоении программы по русскому языку<br>
-      ✔️ Oddiy va tushunarli darslar<br>
-      📚 Savodxonlik darajasini oshirish<br>
-      🏫 Maktabdagi rus tili programmalarini o'zlashtirishga yordam berish<br>
-      🗣 Suhbatda erkin gapirish
+  <div class="card">
+    <!-- header: название + старт -->
+    <div class="kurs-header">
+      <div class="kurs-title">
+        <span class="kurs-label">⭐ КУРС РУССКОГО ЯЗЫКА</span>
+        <h1>ГРАММАТИКА <span>— РАЗГОВОР</span></h1>
+      </div>
+      <div class="start-badge">
+        <span><i class="fas fa-rocket"></i> START!</span>
+      </div>
     </div>
+
+    <!-- главный слоган / цитата -->
+    <div class="lead">
+      <i class="fas fa-quote-left" style="margin-right: 10px; opacity: 0.5;"></i>
+      Займитесь русским языком и откройте для себя мир грамотности и яркого общения.
+    </div>
+
+    <!-- две главные колонки преимуществ (рус/узб) -->
+    <div class="grid-2col">
+      <!-- русский блок -->
+      <div class="feature-block">
+        <i class="fas fa-book-open"></i>
+        <h3>Уроки понятно и интересно</h3>
+        <p>Повышение уровня грамотности. Помощь в освоении программы по русскому языку.</p>
+        <span class="uz-text"><i class="fas fa-arrow-right"></i> Oddiy va tushunarlar darslar</span>
+      </div>
+      <!-- узбекский блок + свободная речь -->
+      <div class="feature-block">
+        <i class="fas fa-comments"></i>
+        <h3>Savodxonlik & erkin suhbat</h3>
+        <p>Savodxonlik darajasini oshirish. Maktabdagi rus tili programmalarini o‘zlashtirishga yordam berish.</p>
+        <span class="uz-text"><i class="fas fa-arrow-right"></i> Suhbatda erkin gapirish</span>
+      </div>
+    </div>
+
+    <!-- дополнительная фишка – болғаныш / пожелание -->
+    <div class="extra-feature">
+      <i class="fas fa-star"></i>
+      <div style="flex:1">
+        <h3 style="color: #3D2F1F; font-weight: 600;">Болғаныш <span style="font-weight: 400; color:#755E3A;">(пожелание удачи)</span></h3>
+        <p style="color: #3E3A33;">Успехов в изучении! Оммад ёр бўлсин!</p>
+      </div>
+    </div>
+
+    <!-- информация об учителе, адрес, телефон в премиум стиле -->
+    <div class="teacher-info">
+      <div class="teacher-detail">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <div>
+          <span class="name">Zilola G‘ayratovna</span>
+          <span class="title">O‘qituvchi / преподаватель</span>
+        </div>
+      </div>
+      <div class="location-contact">
+        <div><i class="fas fa-map-pin"></i> Umid Gulshani 5</div>
+      </div>
+    </div>
+
+    <!-- телефонный блок с большим акцентом -->
+    <div class="phone-block">
+      <span><i class="fas fa-phone-alt"></i> Позвоните сейчас</span>
+      <span class="phone-number"><i class="fas fa-mobile-alt"></i> +998 95 189 16 20</span>
+    </div>
+
+    <!-- подчеркнутая минималистичная деталь -->
+    <hr>
+    <div class="small-note">
+      <i class="far fa-clock"></i> Курс для взрослых и школьников • Грамматика с нуля
+    </div>
+
   </div>
-
-  <div style="text-align:center;">
-    <a href="tel:+998951891620" class="btn">📞 Bog‘lanish</a>
-  </div>
-</div>
-
-<div class="footer">
-  <p>👩‍🏫 O‘qituvchi: Zilola G‘ayratovna</p>
-  <p>📍 Manzil: Umid Gulshani 5</p>
-  <p>☎ Telefon: +998 95 189 16 20</p>
-</div>
-
 </body>
 </html>
